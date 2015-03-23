@@ -13,11 +13,58 @@
                 "element": {"#": "main"}
             }
         },
-        "text": {
-            "prototype": "digit/ui/text.reel",
+        "flow": {
+            "prototype": "montage/ui/flow.reel",
             "properties": {
-                "element": {"#": "text"},
-                "value": "Welcome to this open source app!"
+                "element": {"#": "flow"},
+                "cameraPosition": [
+                    0,
+                    0,
+                    1500
+                ],
+                "paths": [
+                    {
+                        "knots": [
+                            {
+                                "knotPosition": [
+                                    -2400,
+                                    0,
+                                    -1
+                                ],
+                                "nextHandlerPosition": [
+                                    -800,
+                                    0,
+                                    -1
+                                ],
+                                "previousDensity": 10,
+                                "nextDensity": 10
+                            },
+                            {
+                                "knotPosition": [
+                                    2400,
+                                    0,
+                                    -1
+                                ],
+                                "previousHandlerPosition": [
+                                    800,
+                                    0,
+                                    -1
+                                ],
+                                "previousDensity": 10,
+                                "nextDensity": 10
+                            }
+                        ],
+                        "headOffset": 0,
+                        "tailOffset": 0,
+                        "units": {}
+                    }
+                ]
+            }
+        },
+        "list": {
+            "prototype": "digit/ui/list.reel",
+            "properties": {
+                "element": {"#": "list"}
             }
         },
         "title": {
@@ -34,7 +81,12 @@
 <body>
     <div data-montage-id="main" data-montage-skin="light" class="Main">
         <h1 data-montage-id="title"></h1>
-        <p data-montage-id="text"></p>
+        <ul data-montage-id="list">
+            <li></li>
+            <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0" data-montage-id="flow">
+                <div></div>
+            </div>
+        </ul>
     </div>
 </body>
 </html>
