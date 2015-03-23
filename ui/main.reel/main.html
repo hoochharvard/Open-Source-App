@@ -13,62 +13,52 @@
                 "element": {"#": "main"}
             }
         },
-        "flow": {
-            "prototype": "montage/ui/flow.reel",
+        "button": {
+            "prototype": "digit/ui/button.reel",
             "properties": {
-                "element": {"#": "flow"},
-                "cameraPosition": [
-                    0,
-                    0,
-                    1500
-                ],
-                "paths": [
-                    {
-                        "knots": [
-                            {
-                                "knotPosition": [
-                                    -2400,
-                                    0,
-                                    -1
-                                ],
-                                "nextHandlerPosition": [
-                                    -800,
-                                    0,
-                                    -1
-                                ],
-                                "previousDensity": 10,
-                                "nextDensity": 10
-                            },
-                            {
-                                "knotPosition": [
-                                    2400,
-                                    0,
-                                    -1
-                                ],
-                                "previousHandlerPosition": [
-                                    800,
-                                    0,
-                                    -1
-                                ],
-                                "previousDensity": 10,
-                                "nextDensity": 10
-                            }
-                        ],
-                        "headOffset": 0,
-                        "tailOffset": 0,
-                        "units": {}
-                    }
-                ]
+                "element": {"#": "button"},
+                "enabled": true,
+                "label": "Button"
+            }
+        },
+        "button2": {
+            "prototype": "digit/ui/button.reel",
+            "properties": {
+                "element": {"#": "button2"},
+                "enabled": true,
+                "label": "Button"
+            }
+        },
+        "button3": {
+            "prototype": "digit/ui/button.reel",
+            "properties": {
+                "element": {"#": "button3"},
+                "enabled": true,
+                "label": "Button"
             }
         },
         "list": {
             "prototype": "digit/ui/list.reel",
             "properties": {
-                "element": {"#": "list"},
-                "content": [
-                    "",
-                    ""
-                ]
+                "element": {"#": "list"}
+            }
+        },
+        "listItem": {
+            "prototype": "digit/ui/list-item.reel",
+            "properties": {
+                "element": {"#": "listItem"}
+            }
+        },
+        "listItem1": {
+            "prototype": "digit/ui/list-item.reel",
+            "properties": {
+                "element": {"#": "listItem1"}
+            }
+        },
+        "listItem2": {
+            "prototype": "digit/ui/list-item.reel",
+            "properties": {
+                "element": {"#": "listItem2"}
             }
         },
         "title": {
@@ -84,13 +74,19 @@
 </head>
 <body>
     <div data-montage-id="main" data-montage-skin="light" class="Main">
-        <h1 data-montage-id="title"></h1>
-        <ul data-montage-id="list">
-            <li></li>
-            <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0" data-montage-id="flow">
-                <div></div>
-            </div>
-        </ul>
+        <h1 data-montage-id="title">
+            <ul data-montage-id="list">
+                <li data-montage-id="listItem1">
+                    <button data-montage-id="button"></button>
+                </li>
+                <li data-montage-id="listItem">
+                    <button data-montage-id="button2"></button>
+                </li>
+                <li data-montage-id="listItem2">
+                    <button data-montage-id="button3"></button>
+                </li>
+            </ul>
+        </h1>
     </div>
 </body>
 </html>
